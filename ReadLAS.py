@@ -9,8 +9,6 @@ def Get_Las_Files(path=None, filename=None):
     frames = []
     rejected_files=[]
 
-
-    #path = "Open_Source_data_KGS/Logs/"
     x = os.listdir(path)
 
 
