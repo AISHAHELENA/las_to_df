@@ -1,6 +1,5 @@
-import lasio
-import os
-import pandas as pd
+#import lasio
+#import pandas as pd
 
 def Get_Las_Files(path=None):
     Wellname = []
