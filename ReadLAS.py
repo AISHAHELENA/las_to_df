@@ -2,12 +2,13 @@ import lasio
 import os
 import pandas as pd
 
-def Get_Las_Files(path=None, filename=None):
+def Get_Las_Files(path=None):
     Wellname = []
     CurveName = []
     Data = []
     frames = []
     rejected_files=[]
+
 
     x = os.listdir(path)
 
@@ -35,7 +36,9 @@ def Get_Las_Files(path=None, filename=None):
         except:
             rejected_files.append(files)
 
+    #Concat all the df containing one well into one big df
     result = pd.concat(frames, sort=True)
     result.reset_index(inplace=True)
-    result.to_csv(filename)
-    print (f'The rejected files in the directory are {rejected_files}')
+    
+    return (result, rejected_files)
+    
