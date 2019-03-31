@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'las_to_df',
   packages = ['las_to_df'],
-  version = '0.1',
+  version = '1.0',
   license='MIT',
   description = 'This function takes in your individual las files and transforms it into a dataframe. It also give you the list of files that cannot be converted',
   author = 'AISHAHELENA',
